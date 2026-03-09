@@ -720,6 +720,14 @@ showScreen(el.home);
 onAppReady();
 });
 }
+// activar home después de la intro
+setTimeout(() => {
+  const intro = document.getElementById("s-intro");
+  const home = document.getElementById("s-home");
+
+  if (intro) intro.classList.remove("active");
+  if (home) home.classList.add("active");
+}, 3000);
 
 // ─────────────────────────────────────
 //  INIT
