@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="theme-color" content="#050505"/>
+  <title>Vital HL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ░░ SCREEN: INTRO ░░ -->
+
+  <div id="intro" class="screen active">
+    <div class="intro-center">
+      <div class="intro-wordmark">
+        <span class="wm-vital">VITAL</span><span class="wm-hl">HL</span>
+      </div>
+      <div class="intro-ht">Human Tech</div>
+      <div class="intro-tagline" id="js-tagline"></div>
+    </div>
+  </div>
+
+  <!-- ░░ SCREEN: HOME ░░ -->
+
+  <div id="home" class="screen">
+    <div class="page">
+      <header class="nav">
+        <div class="nav-brand"><span class="wm-vital">VITAL</span><span class="wm-hl sm">HL</span></div>
+        <button class="nav-icon" id="js-to-patterns" aria-label="Patrones">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+        </button>
+      </header>
+
+```
+  <div class="content">
+    <h1 class="hero">¿Qué está pasando<br/><em>ahora?</em></h1>
+    <p class="sub">Cuéntame…</p>
+
+    <div class="field-wrap">
+      <textarea id="js-input" class="field" rows="4"
+        placeholder="Escribe libremente. Esto es solo para ti."></textarea>
+    </div>
+
+    <div class="signal" id="js-signal">
+      <span class="signal-pip"></span>Parece un momento importante.
+    </div>
+
+    <div class="vital-msg" id="js-msg" role="status" aria-live="polite"></div>
+
+    <div class="btn-stack" id="js-actions">
+      <button class="btn-hl" id="js-pause">Tomemos un momento</button>
+      <button class="btn-ghost" id="js-to-decision">Modo Decisión</button>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+
+  <!-- ░░ SCREEN: MODO DECISIÓN ░░ -->
+
+  <div id="decision" class="screen">
+    <div class="page">
+      <header class="nav">
+        <button class="nav-back" id="js-back-home">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>
+        </button>
+        <span class="nav-label">Modo Decisión</span>
+      </header>
+
+```
+  <div class="content scroll">
+    <div class="step">
+      <span class="step-n">01</span>
+      <label class="step-q" for="d1">¿Qué está pasando exactamente?</label>
+      <textarea id="d1" class="field sm" rows="3" placeholder="Describe la situación…"></textarea>
+    </div>
+    <div class="step">
+      <span class="step-n">02</span>
+      <label class="step-q" for="d2">¿Qué decisión estás considerando?</label>
+      <textarea id="d2" class="field sm" rows="3" placeholder="¿Qué opciones hay?"></textarea>
+    </div>
+    <div class="step">
+      <span class="step-n">03</span>
+      <label class="step-q" for="d3">¿Qué es lo realmente importante aquí?</label>
+      <textarea id="d3" class="field sm" rows="3" placeholder="Más allá del ruido…"></textarea>
+    </div>
+
+    <p class="insight" id="js-insight"></p>
+
+    <div class="btn-stack">
+      <button class="btn-hl"    id="js-pause-d">Pausa · Respirar</button>
+      <button class="btn-gold"  id="js-share-d">Compartir momento</button>
+      <button class="btn-ghost" id="js-save-d">Guardar reflexión</button>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+
+  <!-- ░░ SCREEN: RESPIRACIÓN ░░ -->
+
+  <div id="breath" class="screen">
+    <div class="breath-center">
+      <p class="breath-phase" id="js-phase">Inhala</p>
+
+```
+  <div class="breath-stage" aria-hidden="true">
+    <div class="ring r3"></div>
+    <div class="ring r2"></div>
+    <div class="ring r1"></div>
+    <div class="core"></div>
+  </div>
+
+  <p class="breath-caption">Las decisiones importantes<br/>merecen buenas condiciones.</p>
+  <div class="breath-timer" id="js-timer">10</div>
+  <button class="skip" id="js-skip">Continuar →</button>
+</div>
+```
+
+  </div>
+
+  <!-- ░░ SCREEN: COMPARTIR ░░ -->
+
+  <div id="share" class="screen">
+    <div class="page center">
+      <div class="share-orb" aria-hidden="true">
+        <svg viewBox="0 0 80 80" fill="none">
+          <circle cx="40" cy="40" r="37" stroke="#36F1CD" stroke-width=".7" opacity=".2"/>
+          <circle cx="40" cy="40" r="25" stroke="#36F1CD" stroke-width=".7" opacity=".45"/>
+          <circle cx="40" cy="40" r="7"  fill="#36F1CD" opacity=".85"/>
+        </svg>
+      </div>
+      <h2 class="share-title">¿Quieres compartir<br/>este momento?</h2>
+      <p class="share-sub">Alguien de confianza puede acompañarte.</p>
+      <div class="btn-stack wide">
+        <button class="btn-hl"    id="js-do-share">Compartir con alguien</button>
+        <button class="btn-ghost" id="js-no-share">Guardar solo para mí</button>
+      </div>
+      <p class="share-feedback" id="js-share-fb" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <!-- ░░ SCREEN: PATRONES ░░ -->
+
+  <div id="patterns" class="screen">
+    <div class="page">
+      <header class="nav">
+        <button class="nav-back" id="js-back-home-p">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>
+        </button>
+        <span class="nav-label">Patrones</span>
+      </header>
+      <div class="content scroll" id="js-patterns-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
